@@ -1,0 +1,6 @@
+{
+    "DbServer" : "skoolbagdbserver.mysql.database.azure.com",
+    "DbUserName" : "skoolbagadmin@skoolbagdbserver",
+    "DbPassword"  : "1234Qwer",
+    "Database": "schoolmanagementsystem"
+}
