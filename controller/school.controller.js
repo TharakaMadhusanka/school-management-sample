@@ -34,7 +34,7 @@ exports.UpdateSchool = async (_req, _res) => {
     try 
     {
         let requestBody = _req.body;
-        
+
         if (requestBody.Type == null || requestBody.Type == '') 
             throw new Error('Missing Required Field, Type');
         
@@ -46,7 +46,7 @@ exports.UpdateSchool = async (_req, _res) => {
                parseInt(requestBody.PostCode) + ',' +
                parseInt(requestBody.NoOfRegisteredStudents) + ',' + 
                parseInt(requestBody.Type) + ',' +
-               (requestBody.SchoolId = null) ? parseInt (requestBody.SchoolId) : 0 + ')'
+               ((requestBody.SchoolId = null) ? parseInt (requestBody.SchoolId) : 0) + ')'
         );
 
         return response;
