@@ -58,7 +58,7 @@ exports.GetStatesList = async(_req, _res) => {
     try
     {
         let listofstates = await contextService.ExecuteQuery(' CALL GetStatesList ');
-        return listofstates;
+        return listofstates[0];
     }
     catch(error) {
         console.log(error);
