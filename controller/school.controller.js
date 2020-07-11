@@ -46,7 +46,7 @@ exports.UpdateSchool = async (_req, _res) => {
                parseInt(requestBody.PostCode) + ',' +
                parseInt(requestBody.NoOfRegisteredStudents) + ',' + 
                parseInt(requestBody.Type) + ',' +
-               ((requestBody.SchoolId = null) ? parseInt (requestBody.SchoolId) : 0) + ')'
+               ((requestBody.SchoolId == null) ? parseInt (requestBody.SchoolId) : 0) + ')'
         );
 
         return response;
