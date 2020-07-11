@@ -57,8 +57,8 @@ exports.UpdateSchool = async (_req, _res) => {
 exports.GetStatesList = async(_req, _res) => {
     try
     {
-        let response = await contextService.ExecuteQuery(' CALL GetStatesList ');
-        return response;
+        let listofstates = await contextService.ExecuteQuery(' CALL GetStatesList ');
+        return listofstates[0];
     }
     catch(error) {
         console.log(error);
