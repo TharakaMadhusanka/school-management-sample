@@ -43,7 +43,7 @@ router.get('/getstates',
 
         try 
         {
-            response.send( await schoolController.UpdateSchool(_req));
+            response.send( await schoolController.GetStatesList());
         }
         catch (error) 
         {

@@ -54,7 +54,7 @@ exports.UpdateSchool = async (_req, _res) => {
     }
 }
 
-expots.GetStatesList = async(_req, _res) => {
+exports.GetStatesList = async(_req, _res) => {
     try
     {
         let response = await contextService.ExecuteQuery(' CALL GetStatesList ');
