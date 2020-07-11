@@ -38,8 +38,8 @@ exports.UpdateSchool = async (_req, _res) => {
                requestBody.SchoolName + '","' +
                requestBody.Street + '","' + 
                requestBody.Suburb + '",' + 
-               ParseInt(requestBody.StateId) + ',' +
-               ParseInt(requestBody.PostCode) + ',' +
+               parseInt(requestBody.StateId) + ',' +
+               parseInt(requestBody.PostCode) + ',' +
                parseInt(requestBody.NoOfRegisteredStudents) + ',' + 
                parseInt(requestBody.Type) + ',' +
                parseInt (requestBody.SchoolId) + ')'
@@ -58,7 +58,7 @@ exports.GetStatesList = async(_req, _res) => {
     try
     {
         let listofstates = await contextService.ExecuteQuery(' CALL GetStatesList ');
-        return listofstates[0];
+        return listofstates;
     }
     catch(error) {
         console.log(error);
